@@ -1,0 +1,136 @@
+.zeekr-container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+h1, h2, .title, .block-title {
+  color: #ffffff !important;
+}
+
+.block {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* БЛОК 1 - ОРИГИНАЛЬНАЯ ВЕРСТКА */
+.block-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.photos-section { display: flex; flex-direction: column; gap: 20px; }
+.album-container { position: relative; width: 100%; aspect-ratio: 16/10; border-radius: 12px; overflow: hidden; }
+.album-photo { width: 100%; height: 100%; object-fit: cover; }
+.nav-button {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.1); border: none; color: white;
+  font-size: 32px; width: 50px; height: 50px; cursor: pointer; border-radius: 50%;
+}
+.prev { left: 15px; } .next { right: 15px; }
+.photo-counter { position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.6); padding: 5px 12px; border-radius: 20px; font-size: 13px; }
+.preview-photos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.preview-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+
+  display: block; /* ВАЖНО */
+}
+.preview-wrapper {
+  position: relative;
+  overflow: hidden; /* ВАЖНО */
+  border-radius: 8px; /* такой же как у картинки */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content-section { display: flex; flex-direction: column; gap: 20px; }
+.title { font-size: 42px; font-weight: 800; }
+.specs-table { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; background: #222; padding: 20px; border-radius: 12px; }
+.spec-item { background: #2a2a2a; padding: 12px; border-radius: 8px; }
+.spec-label { font-size: 10px; color: #666; text-transform: uppercase; }
+.spec-value { font-weight: 600; font-size: 15px; }
+.options-container { display: flex; gap: 10px; }
+.option-button { flex: 1; padding: 12px; background: #2a2a2a; border: 1px solid #333; color: #888; border-radius: 10px; cursor: pointer; }
+.option-button.selected { background: #fff; color: #000; font-weight: 700; }
+.price-display { font-size: 28px; font-weight: 700; }
+.action-button { background: #fff; color: #000; padding: 18px; border-radius: 12px; font-weight: 700; border: none; cursor: pointer; }
+
+/* БЛОК 2 */
+.block-title { font-size: 48px; font-weight: 800; margin-bottom: 30px; text-align: center; }
+.tabs { display: flex; background: #252525; padding: 6px; border-radius: 14px; margin-bottom: 40px; gap: 6px; }
+.tab-button { flex: 1; padding: 16px 0; border-radius: 10px; border: none; background: transparent; color: #666; cursor: pointer; }
+.tab-button.active { background: #fff; color: #000; font-weight: 700; }
+.specs-big-wrapper { overflow-x: auto; border: 1px solid #333; border-radius: 16px; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.specs-grid-table { width: 100%; border-collapse: collapse; min-width: 1000px; }
+.specs-grid-table th { background: #333; color: #999; padding: 20px 10px; font-size: 12px; text-align: left; }
+.specs-grid-table td { padding: 25px 10px; border-bottom: 1px solid #222; }
+
+/* ОСТРОВКИ */
+.text-islands-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.island { background: #252525; padding: 25px; border-radius: 18px; border: 1px solid #333; }
+.island-header { color: #ffffff; font-size: 18px; font-weight: 800; margin-bottom: 12px; text-transform: uppercase; }
+.island-body { color: #ccc; font-size: 14px; line-height: 1.5; }
+.island-column {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* регулируй как хочешь */
+}
+
+.island-danger { border: 1px solid rgba(255, 0, 0, 0.4) !important; }
+.danger-wrap { background: rgba(255, 0, 0, 0.15); padding: 12px; border-radius: 10px; margin-top: 10px; }
+.text-critical { color: #ff3333; font-size: 20px; font-weight: 900; display: block; margin-bottom: 5px; }
+
+/* БЛОК 3 */
+.block-3 .block-content {
+  width: 100%;
+  max-width: 1400px;
+}
+
+.block-3 .block-title,
+.block-3 .description {
+  text-align: left;
+}
+.steps-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
+.step-island { position: relative; background: #222; padding: 30px; border-radius: 20px; border: 1px solid #333; overflow: hidden; transition: 0.4s; }
+.step-number { position: absolute; top: 10px; right: 20px; font-size: 40px; font-weight: 900; color: rgba(255,255,255,0.03); transition: 0.4s; }
+.step-island:hover { transform: translateY(-10px); border-color: #666; }
+.step-island:hover .step-number { color: rgba(255,255,255,0.1); }
+.step-island::after {
+  content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+  transform: skewX(-25deg); transition: 0.7s;
+}
+.step-island:hover::after { left: 150%; }
+
+@media (max-width: 1024px) {
+  .block-1 { grid-template-columns: 1fr; }
+  .text-islands-container, .steps-container { grid-template-columns: 1fr; }
+}

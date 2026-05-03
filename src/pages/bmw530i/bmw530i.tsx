@@ -6,26 +6,26 @@ interface Photo {
   url: string;
 }
 
-const ZeekrX: React.FC = () => {
+const BMW530i: React.FC = () => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(0);
   const [activeTab, setActiveTab] = useState(0);
 
   const photos: Photo[] = [
-    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06681_589e464deb.jpg&w=1024&q=100' },
-    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06685_12eb062afd.jpg&w=1024&q=100' },
-    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06682_21608e9223.jpg&w=1024&q=100' },
-    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06686_ffa5287cf8.jpg&w=1024&q=100' },
-    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06689_f1a0a148cf.jpg&w=1024&q=100' },
-    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06688_deb28516a8.jpg&w=1024&q=100' },
-    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06690_0f12a2b5ed.jpg&w=1024&q=100' },
+    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_Syndicate2_c208fdb4c8.jpg&w=1024&q=100' },
+    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_Syndicate1_7b5432730c.jpg&w=1024&q=100' },
+    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_7_M300639_2cac59f7bd.jpg&w=1024&q=100' },
+    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_Syndicate3_85398054c7.jpg&w=1024&q=100' },
+    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_7_M300636_49792acfff.jpg&w=1024&q=100' },
+    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_7_M300659_09718dda9f.jpg&w=1024&q=100' },
+    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_7_M300661_a29f9c0c31.jpg&w=1024&q=100' },
   ];
 
   const options = [
-    { label: "день", text: "26.000 ₸ / сутки" },
-    { label: "2-4 дня", text: "23.000 ₸ / сутки" },
-    { label: "5-15 дней", text: "21.000 ₸ / сутки" },
-    { label: "16-30 дней", text: "20.000 ₸ / сутки" }
+    { label: "день", text: "75.000 ₸ / сутки" },
+    { label: "2-4 дня", text: "70.000 ₸ / сутки" },
+    { label: "5-15 дней", text: "60.000 ₸ / сутки" },
+    { label: "16-30 дней", text: "50.000 ₸ / сутки" }
   ];
 
   const handlePrevPhoto = () => {
@@ -68,9 +68,9 @@ const ZeekrX: React.FC = () => {
         </div>
 
         <div className="content-section">
-          <h1 className="title">Chery Tiggo 7 Pro 2024</h1>
+          <h1 className="title">BMW 530i 2019</h1>
           <p className="description">
-            Аренда Chery Tiggo 7 Pro 2024 по выгодным ценам — современный стиль, комфорт и экономичность
+            Аренда BMW 530i 2019 по выгодным ценам с элегантным дизайном и динамичными характеристиками
           </p>
 
           <div className="specs-table">
@@ -78,7 +78,7 @@ const ZeekrX: React.FC = () => {
               <div className="spec-value">5 мест</div>
             </div>
             <div className="spec-item">
-              <div className="spec-value">Передний привод</div>
+              <div className="spec-value">Задний привод</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">КПП</div>
@@ -86,15 +86,15 @@ const ZeekrX: React.FC = () => {
             </div>
             <div className="spec-item">
               <div className="spec-label">Расход</div>
-              <div className="spec-value">7.0 л/100 км</div>
+              <div className="spec-value">11 л/100 км</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Объем двигателя</div>
-              <div className="spec-value">1.6L</div>
+              <div className="spec-value">2.0L</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Год выпуска</div>
-              <div className="spec-value">2024</div>
+              <div className="spec-value">2019</div>
             </div>
           </div>
 
@@ -145,9 +145,9 @@ const ZeekrX: React.FC = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>5</td><td>147</td><td>1.6L</td><td>Кроссовер</td><td>Передний</td>
-                    <td>9.8 сек</td><td>Синий</td><td>Черный</td><td>185 км/ч</td><td>Автомат</td>
-                    <td>7.0 л/100 км</td><td>2024</td>
+                    <td>5</td><td>252</td><td>2.0L</td><td>Седан</td><td>Задний</td>
+                    <td>6.2 сек</td><td>Черный</td><td>Черный</td><td>250 км/ч</td><td>Автомат</td>
+                    <td>11.0 л/100 км</td><td>2019</td>
                   </tr>
                 </tbody>
               </table>
@@ -221,20 +221,20 @@ const ZeekrX: React.FC = () => {
       {/* БЛОК 3 */}
       <section className="block block-3">
         <div className="block-content">
-          <h2 className="block-title">Аренда ZEEKR X в Алматы</h2>
+          <h2 className="block-title">Аренда BMW 530i 2019 в Алматы</h2>
           <p className="description">
-            Условия и цены на прокат автомобиля ZEEKR X, включая гибкие тарифы на разные сроки аренды, от одного дня до месяца, с возможностью онлайн-бронирования и подробной информацией о доступности в Алматы.
+            Условия и цены на прокат автомобиля BMW 530i 2019, включая гибкие тарифы на разные сроки аренды, от одного дня до месяца, с возможностью онлайн-бронирования и подробной информацией о доступности в Алматы
           </p>
           <div className="steps-container">
             <div className="step-island">
               <div className="step-number">01</div>
               <div className="island-header">Преимущества аренды в Алматы</div>
-              <div className="island-body">Почему стоит выбрать ZEEKR X для поездок по Алматы, благодаря его передовому дизайну, мощности, и модному интерьеру.</div>
+              <div className="island-body">Почему стоит выбрать 530i 2019 для поездок по Алматы, благодаря его элегантному дизайну, динамичным характеристикам и тёплому коричневому интерьеру</div>
             </div>
             <div className="step-island">
               <div className="step-number">02</div>
               <div className="island-header">Особенности автомобиля для аренды</div>
-              <div className="island-body">Узнайте о ключевых характеристиках ZEEKR X, таких как мощный электрический двигатель, прочный кузов, высокотехнологичный салон и адаптация к сложным дорогам Алматы.</div>
+              <div className="island-body">Узнайте о ключевых характеристиках BMW 530i 2019, таких как мощный двигатель, стильный кузов, высокотехнологичный салон с тёплым коричневым интерьером и адаптация к городским дорогам Алматы</div>
             </div>
           </div>
         </div>
@@ -243,4 +243,4 @@ const ZeekrX: React.FC = () => {
   );
 };
 
-export default ZeekrX;
+export default BMW530i;

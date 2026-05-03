@@ -6,26 +6,35 @@ interface Photo {
   url: string;
 }
 
-const ZeekrX: React.FC = () => {
+const KiaCarnival2024: React.FC = () => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(0);
   const [activeTab, setActiveTab] = useState(0);
 
   const photos: Photo[] = [
-    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06681_589e464deb.jpg&w=1024&q=100' },
-    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06685_12eb062afd.jpg&w=1024&q=100' },
-    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06682_21608e9223.jpg&w=1024&q=100' },
-    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06686_ffa5287cf8.jpg&w=1024&q=100' },
-    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06689_f1a0a148cf.jpg&w=1024&q=100' },
-    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06688_deb28516a8.jpg&w=1024&q=100' },
-    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06690_0f12a2b5ed.jpg&w=1024&q=100' },
+    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01639_e98c6ee100.jpg&w=1024&q=100' },
+    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01633_706df52ac6.jpg&w=1024&q=100' },
+    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01644_952d61c7d2.jpg&w=1024&q=100' },
+    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01646_10a16426c6.jpg&w=1024&q=100' },
+    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01649_2ee6cbe648.jpg&w=1024&q=100' },
+    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01648_ce81d8a9b6.jpg&w=1024&q=100' },
+    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01650_ed355c02ee.jpg&w=1024&q=100' },
+    { id: 8, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01660_3722931951.jpg&w=1024&q=100' },
+    { id: 9, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01658_162063ed2c.jpg&w=1024&q=100' },
+    { id: 10, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01661_2e0a945c87.jpg&w=1024&q=100' },
+    { id: 11, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01655_9beda5aa18.jpg&w=1024&q=100' },
+    { id: 12, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01652_0056cff453.jpg&w=1024&q=100' },
+    { id: 13, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01656_96ecb85179.jpg&w=1024&q=100' },
+    { id: 14, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01664_5a0504768f.jpg&w=1024&q=100' },
+    { id: 15, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01653_f0d8bca6e4.jpg&w=1024&q=100' },
+    { id: 16, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01662_354c578b29.jpg&w=1024&q=100' },
   ];
 
   const options = [
-    { label: "день", text: "26.000 ₸ / сутки" },
-    { label: "2-4 дня", text: "23.000 ₸ / сутки" },
-    { label: "5-15 дней", text: "21.000 ₸ / сутки" },
-    { label: "16-30 дней", text: "20.000 ₸ / сутки" }
+    { label: "день", text: "65.000 ₸ / сутки" },
+    { label: "2-4 дня", text: "60.000 ₸ / сутки" },
+    { label: "5-15 дней", text: "50.000 ₸ / сутки" },
+    { label: "16-30 дней", text: "40.000 ₸ / сутки" }
   ];
 
   const handlePrevPhoto = () => {
@@ -68,14 +77,14 @@ const ZeekrX: React.FC = () => {
         </div>
 
         <div className="content-section">
-          <h1 className="title">Chery Tiggo 7 Pro 2024</h1>
+          <h1 className="title">Kia Carnival 2024</h1>
           <p className="description">
-            Аренда Chery Tiggo 7 Pro 2024 по выгодным ценам — современный стиль, комфорт и экономичность
+            Отличный выбор для тех, кому нужен просторный, комфортный и надежный автомобиль
           </p>
 
           <div className="specs-table">
             <div className="spec-item">
-              <div className="spec-value">5 мест</div>
+              <div className="spec-value">8 мест</div>
             </div>
             <div className="spec-item">
               <div className="spec-value">Передний привод</div>
@@ -86,11 +95,11 @@ const ZeekrX: React.FC = () => {
             </div>
             <div className="spec-item">
               <div className="spec-label">Расход</div>
-              <div className="spec-value">7.0 л/100 км</div>
+              <div className="spec-value">10.8 л/100 км</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Объем двигателя</div>
-              <div className="spec-value">1.6L</div>
+              <div className="spec-value">3.5L</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Год выпуска</div>
@@ -145,9 +154,9 @@ const ZeekrX: React.FC = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>5</td><td>147</td><td>1.6L</td><td>Кроссовер</td><td>Передний</td>
-                    <td>9.8 сек</td><td>Синий</td><td>Черный</td><td>185 км/ч</td><td>Автомат</td>
-                    <td>7.0 л/100 км</td><td>2024</td>
+                    <td>8</td><td>294</td><td>3.5L</td><td>Минивэн</td><td>Передний</td>
+                    <td>8.0 сек</td><td>Белый</td><td>Бежевый</td><td>210 км/ч</td><td>Автомат</td>
+                    <td>10.8 л/100 км</td><td>2024</td>
                   </tr>
                 </tbody>
               </table>
@@ -221,20 +230,25 @@ const ZeekrX: React.FC = () => {
       {/* БЛОК 3 */}
       <section className="block block-3">
         <div className="block-content">
-          <h2 className="block-title">Аренда ZEEKR X в Алматы</h2>
+          <h2 className="block-title">Аренда Kia Carnival 2024 в Алматы</h2>
           <p className="description">
-            Условия и цены на прокат автомобиля ZEEKR X, включая гибкие тарифы на разные сроки аренды, от одного дня до месяца, с возможностью онлайн-бронирования и подробной информацией о доступности в Алматы.
+            Аренда Kia Carnival 2024 в Алматы — это отличный выбор для тех, кому нужен просторный, комфортный и надежный автомобиль для семьи, деловых поездок или путешествий большой компанией. Современный минивэн с премиальным дизайном и вместительным салоном на 7–8 мест сочетает комфорт бизнес-класса, технологии нового поколения и высокий уровень безопасности.
           </p>
           <div className="steps-container">
             <div className="step-island">
               <div className="step-number">01</div>
-              <div className="island-header">Преимущества аренды в Алматы</div>
-              <div className="island-body">Почему стоит выбрать ZEEKR X для поездок по Алматы, благодаря его передовому дизайну, мощности, и модному интерьеру.</div>
+              <div className="island-header">Преимущества аренды Kia Carnival 2024</div>
+              <div className="island-body">Kia Carnival 2024 — это сочетание премиального уровня комфорта и практичности. Вместительный салон с трансформацией сидений обеспечивает удобное размещение большой семьи или группы коллег. Автомобиль отличается мягким ходом, экономичным двигателем и современными мультимедийными системами. Просторный багажный отсек позволяет взять с собой все необходимое для путешествий, а расширенный набор систем безопасности делает поездку безопасной и приятной.</div>
             </div>
             <div className="step-island">
               <div className="step-number">02</div>
-              <div className="island-header">Особенности автомобиля для аренды</div>
-              <div className="island-body">Узнайте о ключевых характеристиках ZEEKR X, таких как мощный электрический двигатель, прочный кузов, высокотехнологичный салон и адаптация к сложным дорогам Алматы.</div>
+              <div className="island-header">Особенности Kia Carnival 2024</div>
+              <div className="island-body">Автомобиль выделяется современным дизайном, просторным салоном и удобством для дальних поездок. Kia Carnival оснащён мультимедийной системой, климат-контролем для всех рядов и комфортными креслами, которые создают атмосферу премиум-класса. Машина адаптирована для поездок по городским улицам и загородным маршрутам, а высокий уровень шумоизоляции делает каждую поездку максимально комфортной. Это идеальный вариант для аренды, если нужен надежный и просторный автомобиль для больших компаний и семейных путешествий.</div>
+            </div>
+            <div className="step-island">
+              <div className="step-number">03</div>
+              <div className="island-header">Цены на аренду Kia Carnival 2024</div>
+              <div className="island-body">Стоимость аренды Kia Carnival 2024 в Алматы начинается от ₸35 000 в сутки. Доступны различные тарифы: краткосрочная аренда на 1–2 дня, аренда на неделю и долгосрочные пакеты. Все условия максимально прозрачные и удобные, а бронирование онлайн позволяет оформить аренду в любое время.</div>
             </div>
           </div>
         </div>
@@ -243,4 +257,4 @@ const ZeekrX: React.FC = () => {
   );
 };
 
-export default ZeekrX;
+export default KiaCarnival2024;

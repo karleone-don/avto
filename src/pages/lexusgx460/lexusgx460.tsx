@@ -6,26 +6,30 @@ interface Photo {
   url: string;
 }
 
-const ZeekrX: React.FC = () => {
+const LexusGX460: React.FC = () => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(0);
   const [activeTab, setActiveTab] = useState(0);
 
   const photos: Photo[] = [
-    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06681_589e464deb.jpg&w=1024&q=100' },
-    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06685_12eb062afd.jpg&w=1024&q=100' },
-    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06682_21608e9223.jpg&w=1024&q=100' },
-    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06686_ffa5287cf8.jpg&w=1024&q=100' },
-    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06689_f1a0a148cf.jpg&w=1024&q=100' },
-    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06688_deb28516a8.jpg&w=1024&q=100' },
-    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06690_0f12a2b5ed.jpg&w=1024&q=100' },
+    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_08020_dd4b6e4336.jpg&w=1024&q=100' },
+    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_08018_15c74c8e39.jpg&w=1024&q=100' },
+    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_08024_b2b8adb729.jpg&w=1024&q=100' },
+    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_08022_a1bed813c4.jpg&w=1024&q=100' },
+    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_08026_8fa481b75a.jpg&w=1024&q=100' },
+    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_08025_0b5f47e401.jpg&w=1024&q=100' },
+    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_08027_cc2215481c.jpg&w=1024&q=100' },
+    { id: 8, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_08028_894601eb6f.jpg&w=1024&q=100' },
+    { id: 9, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_08029_89a33c4e8d.jpg&w=1024&q=100' },
+    { id: 10, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_08030_a83ea6b6c0.jpg&w=1024&q=100' },
+    { id: 11, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_08031_a68e5a99a0.jpg&w=1024&q=100' },
   ];
 
   const options = [
-    { label: "день", text: "26.000 ₸ / сутки" },
-    { label: "2-4 дня", text: "23.000 ₸ / сутки" },
-    { label: "5-15 дней", text: "21.000 ₸ / сутки" },
-    { label: "16-30 дней", text: "20.000 ₸ / сутки" }
+    { label: "день", text: "60.000 ₸ / сутки" },
+    { label: "2-4 дня", text: "55.000 ₸ / сутки" },
+    { label: "5-15 дней", text: "50.000 ₸ / сутки" },
+    { label: "16-30 дней", text: "40.000 ₸ / сутки" }
   ];
 
   const handlePrevPhoto = () => {
@@ -68,17 +72,17 @@ const ZeekrX: React.FC = () => {
         </div>
 
         <div className="content-section">
-          <h1 className="title">Chery Tiggo 7 Pro 2024</h1>
+          <h1 className="title">Lexus GX460 2021</h1>
           <p className="description">
-            Аренда Chery Tiggo 7 Pro 2024 по выгодным ценам — современный стиль, комфорт и экономичность
+            Lexus GX460 2021 — это роскошный рамный внедорожник-SUV
           </p>
 
           <div className="specs-table">
             <div className="spec-item">
-              <div className="spec-value">5 мест</div>
+              <div className="spec-value">7 мест</div>
             </div>
             <div className="spec-item">
-              <div className="spec-value">Передний привод</div>
+              <div className="spec-value">Полный привод (4WD)</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">КПП</div>
@@ -86,15 +90,15 @@ const ZeekrX: React.FC = () => {
             </div>
             <div className="spec-item">
               <div className="spec-label">Расход</div>
-              <div className="spec-value">7.0 л/100 км</div>
+              <div className="spec-value">14,5 кВт·ч/100 км</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Объем двигателя</div>
-              <div className="spec-value">1.6L</div>
+              <div className="spec-value">4.6L V8</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Год выпуска</div>
-              <div className="spec-value">2024</div>
+              <div className="spec-value">2021</div>
             </div>
           </div>
 
@@ -145,9 +149,9 @@ const ZeekrX: React.FC = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>5</td><td>147</td><td>1.6L</td><td>Кроссовер</td><td>Передний</td>
-                    <td>9.8 сек</td><td>Синий</td><td>Черный</td><td>185 км/ч</td><td>Автомат</td>
-                    <td>7.0 л/100 км</td><td>2024</td>
+                    <td>7</td><td>301</td><td>4.6L V8</td><td>Внедорожник</td><td>Полный</td>
+                    <td>9.2 сек</td><td>Черный</td><td>Черный</td><td>175 км/ч</td><td>Автомат</td>
+                    <td>14,5 кВт·ч/100 км</td><td>2021</td>
                   </tr>
                 </tbody>
               </table>
@@ -221,20 +225,25 @@ const ZeekrX: React.FC = () => {
       {/* БЛОК 3 */}
       <section className="block block-3">
         <div className="block-content">
-          <h2 className="block-title">Аренда ZEEKR X в Алматы</h2>
+          <h2 className="block-title">Аренда Lexus GX460 2021 в Алматы</h2>
           <p className="description">
-            Условия и цены на прокат автомобиля ZEEKR X, включая гибкие тарифы на разные сроки аренды, от одного дня до месяца, с возможностью онлайн-бронирования и подробной информацией о доступности в Алматы.
+            Аренда Lexus GX460 2021 в Алматы — это возможность взять в аренду мощный и вместительный премиальный внедорожник с просторным 7-местным салоном, комфортабельной отделкой и традиционной надежностью Lexus. Этот автомобиль идеально подходит как для семейных путешествий по Казахстану, так и для уверенных поездок по пересечённой местности благодаря полному приводу и высокому дорожному просвету.
           </p>
           <div className="steps-container">
             <div className="step-island">
               <div className="step-number">01</div>
-              <div className="island-header">Преимущества аренды в Алматы</div>
-              <div className="island-body">Почему стоит выбрать ZEEKR X для поездок по Алматы, благодаря его передовому дизайну, мощности, и модному интерьеру.</div>
+              <div className="island-header">Преимущества аренды Lexus GX460 2021</div>
+              <div className="island-body">Lexus GX460 2021 выделяется сочетанием премиального комфорта и проходимости. Просторный салон с тремя рядами сидений позволяет удобно разместить семью и друзей, а мощный V8-двигатель обеспечивает уверенный разгон и высокий крутящий момент. Современные системы безопасности, адаптивный круиз-контроль и полный привод делают поездки более безопасными и комфортными в любых условиях.</div>
             </div>
             <div className="step-island">
               <div className="step-number">02</div>
-              <div className="island-header">Особенности автомобиля для аренды</div>
-              <div className="island-body">Узнайте о ключевых характеристиках ZEEKR X, таких как мощный электрический двигатель, прочный кузов, высокотехнологичный салон и адаптация к сложным дорогам Алматы.</div>
+              <div className="island-header">Особенности Lexus GX460 2021</div>
+              <div className="island-body">Автомобиль оснащён атмосферным 4.6 л V8-двигателем мощностью 301 л. с. и крутящим моментом 329 фут-фунт (≈446 Н·м), работающим в сочетании с 6-ступенчатой автоматической коробкой передач и системой полного привода. Надёжная рамная конструкция, традиционная подвеска, система Multi-Terrain Select и активный контроль тяги делают GX460 способным уверенно преодолевать бездорожье, сохраняя при этом комфорт на асфальте. В салоне — качественная отделка, удобные сиденья и широкий набор опций для комфорта и развлечений.</div>
+            </div>
+            <div className="step-island">
+              <div className="step-number">03</div>
+              <div className="island-header">Цены на аренду Lexus GX460 2021</div>
+              <div className="island-body">Стоимость аренды Lexus GX460 2021 в Алматы может начинаться от ориентировочно ₸50000 в сутки (зависит от агентства, условий и комплектации). Доступны пакеты аренды на день, несколько дней или длительный срок с удобным бронированием онлайн.</div>
             </div>
           </div>
         </div>
@@ -243,4 +252,4 @@ const ZeekrX: React.FC = () => {
   );
 };
 
-export default ZeekrX;
+export default LexusGX460;

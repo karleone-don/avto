@@ -6,26 +6,31 @@ interface Photo {
   url: string;
 }
 
-const ZeekrX: React.FC = () => {
+const BenzV220: React.FC = () => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(0);
   const [activeTab, setActiveTab] = useState(0);
 
   const photos: Photo[] = [
-    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06681_589e464deb.jpg&w=1024&q=100' },
-    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06685_12eb062afd.jpg&w=1024&q=100' },
-    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06682_21608e9223.jpg&w=1024&q=100' },
-    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06686_ffa5287cf8.jpg&w=1024&q=100' },
-    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06689_f1a0a148cf.jpg&w=1024&q=100' },
-    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06688_deb28516a8.jpg&w=1024&q=100' },
-    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06690_0f12a2b5ed.jpg&w=1024&q=100' },
+    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06693_6558c3461e.jpg&w=1024&q=100' },
+    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06692_458a8b851f.jpg&w=1024&q=100' },
+    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06698_3fac4eda3d.jpg&w=1024&q=100' },
+    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06695_63e870c2f4.jpg&w=1024&q=100' },
+    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06701_0351084fe8.jpg&w=1024&q=100' },
+    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06696_265dfa8623.jpg&w=1024&q=100' },
+    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06702_b5904465e2.jpg&w=1024&q=100' },
+    { id: 8, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06715_24906742ca.jpg&w=1024&q=100' },
+    { id: 9, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06711_1744c7455b.jpg&w=1024&q=100' },
+    { id: 10, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06710_262d52a8d2.jpg&w=1024&q=100' },
+    { id: 11, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06708_c2d46bf59b.jpg&w=1024&q=100' },
+    { id: 12, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06707_328831dd43.jpg&w=1024&q=100' },
   ];
 
   const options = [
-    { label: "день", text: "26.000 ₸ / сутки" },
-    { label: "2-4 дня", text: "23.000 ₸ / сутки" },
-    { label: "5-15 дней", text: "21.000 ₸ / сутки" },
-    { label: "16-30 дней", text: "20.000 ₸ / сутки" }
+    { label: "день", text: "150.000 ₸ / сутки" },
+    { label: "2-4 дня", text: "145.000 ₸ / сутки" },
+    { label: "5-15 дней", text: "135.000 ₸ / сутки" },
+    { label: "16-30 дней", text: "100.000 ₸ / сутки" }
   ];
 
   const handlePrevPhoto = () => {
@@ -68,17 +73,17 @@ const ZeekrX: React.FC = () => {
         </div>
 
         <div className="content-section">
-          <h1 className="title">Chery Tiggo 7 Pro 2024</h1>
+          <h1 className="title">Mercedes-Benz V220 2021</h1>
           <p className="description">
-            Аренда Chery Tiggo 7 Pro 2024 по выгодным ценам — современный стиль, комфорт и экономичность
+            Аренда Mercedes-Benz V220 2021 — это сочетание премиального дизайна, высочайшего комфорта и большого пространства.
           </p>
 
           <div className="specs-table">
             <div className="spec-item">
-              <div className="spec-value">5 мест</div>
+              <div className="spec-value">7 мест</div>
             </div>
             <div className="spec-item">
-              <div className="spec-value">Передний привод</div>
+              <div className="spec-value">Полный привод</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">КПП</div>
@@ -86,15 +91,15 @@ const ZeekrX: React.FC = () => {
             </div>
             <div className="spec-item">
               <div className="spec-label">Расход</div>
-              <div className="spec-value">7.0 л/100 км</div>
+              <div className="spec-value">6.5-7.5 л/100 км</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Объем двигателя</div>
-              <div className="spec-value">1.6L</div>
+              <div className="spec-value">2.2L diesel</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Год выпуска</div>
-              <div className="spec-value">2024</div>
+              <div className="spec-value">2021</div>
             </div>
           </div>
 
@@ -145,9 +150,9 @@ const ZeekrX: React.FC = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>5</td><td>147</td><td>1.6L</td><td>Кроссовер</td><td>Передний</td>
-                    <td>9.8 сек</td><td>Синий</td><td>Черный</td><td>185 км/ч</td><td>Автомат</td>
-                    <td>7.0 л/100 км</td><td>2024</td>
+                    <td>7</td><td>163</td><td>2.2L diesel</td><td>Минивэн</td><td>Полный</td>
+                    <td>9-10 сек</td><td>Черный</td><td>Бежевый</td><td>195 км/ч</td><td>Автомат</td>
+                    <td>6.5-7.5 л/100 км</td><td>2021</td>
                   </tr>
                 </tbody>
               </table>
@@ -221,20 +226,20 @@ const ZeekrX: React.FC = () => {
       {/* БЛОК 3 */}
       <section className="block block-3">
         <div className="block-content">
-          <h2 className="block-title">Аренда ZEEKR X в Алматы</h2>
+          <h2 className="block-title">Аренда Mercedes-Benz V220 2021 в Алматы</h2>
           <p className="description">
-            Условия и цены на прокат автомобиля ZEEKR X, включая гибкие тарифы на разные сроки аренды, от одного дня до месяца, с возможностью онлайн-бронирования и подробной информацией о доступности в Алматы.
+            В Алматы Mercedes-Benz V220 2021 доступен для аренды на выгодных условиях с гибкими тарифами: от одного дня до долгосрочной аренды. Клиенты могут оформить онлайн-бронирование, узнать актуальную доступность и выбрать оптимальный период использования. Этот автомобиль отлично подходит как для частных поездок, так и для корпоративных мероприятий.
           </p>
           <div className="steps-container">
             <div className="step-island">
               <div className="step-number">01</div>
-              <div className="island-header">Преимущества аренды в Алматы</div>
-              <div className="island-body">Почему стоит выбрать ZEEKR X для поездок по Алматы, благодаря его передовому дизайну, мощности, и модному интерьеру.</div>
+              <div className="island-header">Преимущества аренды Mercedes-Benz V220 2021</div>
+              <div className="island-body">Mercedes-Benz V220 2021 — это эталон комфорта и безопасности. Просторный салон, премиальные материалы отделки, продвинутая шумоизоляция, климат-контроль для всех рядов и плавная подвеска обеспечивают настоящий бизнес-класс на колесах. Экономичный дизельный двигатель, современные системы помощи водителю и знаменитое качество Mercedes делают этот минивэн идеальным выбором для длительных маршрутов, путешествий и трансферов.</div>
             </div>
             <div className="step-island">
               <div className="step-number">02</div>
-              <div className="island-header">Особенности автомобиля для аренды</div>
-              <div className="island-body">Узнайте о ключевых характеристиках ZEEKR X, таких как мощный электрический двигатель, прочный кузов, высокотехнологичный салон и адаптация к сложным дорогам Алматы.</div>
+              <div className="island-header">Особенности Mercedes-Benz V220 2021 для аренды</div>
+              <div className="island-body">V-Class известен своей универсальностью: удобные трансформации салона, большой багажный отсек, комфортная посадка всех пассажиров и технологичное оснащение делают модель максимально практичной. Автомобиль уверенно ведет себя как в городе, так и на трассе, а высокий уровень безопасности идеально подходит для перевозки VIP-гостей, семей или небольших групп.</div>
             </div>
           </div>
         </div>
@@ -243,4 +248,4 @@ const ZeekrX: React.FC = () => {
   );
 };
 
-export default ZeekrX;
+export default BenzV220;

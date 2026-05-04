@@ -6,26 +6,28 @@ interface Photo {
   url: string;
 }
 
-const BMW530i: React.FC = () => {
+const LandCruiser200: React.FC = () => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(0);
   const [activeTab, setActiveTab] = useState(0);
 
   const photos: Photo[] = [
-    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_Syndicate2_c208fdb4c8.jpg&w=1024&q=100' },
-    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_Syndicate1_7b5432730c.jpg&w=1024&q=100' },
-    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_7_M300639_2cac59f7bd.jpg&w=1024&q=100' },
-    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_Syndicate3_85398054c7.jpg&w=1024&q=100' },
-    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_7_M300636_49792acfff.jpg&w=1024&q=100' },
-    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_7_M300659_09718dda9f.jpg&w=1024&q=100' },
-    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_7_M300661_a29f9c0c31.jpg&w=1024&q=100' },
+    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09492_be48aaac74.jpg&w=1024&q=100' },
+    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09491_186fb46a0d.jpg&w=1024&q=100' },
+    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09493_7addf46fe2.jpg&w=1024&q=100' },
+    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09494_42120b23b5.jpg&w=1024&q=100' },
+    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09497_ce0f8460dc.jpg&w=1024&q=100' },
+    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09498_5f106c7c79.jpg&w=1024&q=100' },
+    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09499_f8eca38365.jpg&w=1024&q=100' },
+    { id: 8, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09501_25541a2129.jpg&w=1024&q=100' },
+    { id: 9, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09496_5e848b60d7.jpg&w=1024&q=100' },
   ];
 
   const options = [
-    { label: "день", text: "75.000 ₸ / сутки" },
-    { label: "2-4 дня", text: "70.000 ₸ / сутки" },
-    { label: "5-15 дней", text: "60.000 ₸ / сутки" },
-    { label: "16-30 дней", text: "50.000 ₸ / сутки" }
+    { label: "день", text: "90.000 ₸ / сутки" },
+    { label: "2-4 дня", text: "85.000 ₸ / сутки" },
+    { label: "5-15 дней", text: "70.000 ₸ / сутки" },
+    { label: "16-30 дней", text: "60.000 ₸ / сутки" }
   ];
 
   const handlePrevPhoto = () => {
@@ -68,17 +70,17 @@ const BMW530i: React.FC = () => {
         </div>
 
         <div className="content-section">
-          <h1 className="title">BMW 530i 2019</h1>
+          <h1 className="title">Toyota Land Cruiser 200 2021</h1>
           <p className="description">
-            Аренда BMW 530i 2019 по выгодным ценам с элегантным дизайном и динамичными характеристиками
+            Аренда Toyota Land Cruiser 200 2021 по выгодным ценам с надежным дизайном и внедорожными возможностями
           </p>
 
           <div className="specs-table">
             <div className="spec-item">
-              <div className="spec-value">5 мест</div>
+              <div className="spec-value">7 мест</div>
             </div>
             <div className="spec-item">
-              <div className="spec-value">Задний привод</div>
+              <div className="spec-value">Полный привод</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">КПП</div>
@@ -86,15 +88,15 @@ const BMW530i: React.FC = () => {
             </div>
             <div className="spec-item">
               <div className="spec-label">Расход</div>
-              <div className="spec-value">11 л/100 км</div>
+              <div className="spec-value">15 л/100 км</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Объем двигателя</div>
-              <div className="spec-value">2.0L</div>
+              <div className="spec-value">4.0L</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Год выпуска</div>
-              <div className="spec-value">2019</div>
+              <div className="spec-value">2021</div>
             </div>
           </div>
 
@@ -145,9 +147,9 @@ const BMW530i: React.FC = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>5</td><td>252</td><td>2.0L</td><td>Седан</td><td>Задний</td>
-                    <td>6.2 сек</td><td>Черный</td><td>Черный</td><td>250 км/ч</td><td>Автомат</td>
-                    <td>11.0 л/100 км</td><td>2019</td>
+                    <td>7</td><td>240</td><td>4.0L</td><td>Внедорожник</td><td>Полный</td>
+                    <td>8.6 сек</td><td>Черный</td><td>Черный</td><td>175 км/ч</td><td>Автомат</td>
+                    <td>15.0 л/100 км</td><td>2021</td>
                   </tr>
                 </tbody>
               </table>
@@ -221,20 +223,20 @@ const BMW530i: React.FC = () => {
       {/* БЛОК 3 */}
       <section className="block block-3">
         <div className="block-content">
-          <h2 className="block-title">Аренда BMW 530i 2019 в Алматы</h2>
+          <h2 className="block-title">Аренда Toyota Land Cruiser 200 2021 в Алматы</h2>
           <p className="description">
-            Условия и цены на прокат автомобиля BMW 530i 2019, включая гибкие тарифы на разные сроки аренды, от одного дня до месяца, с возможностью онлайн-бронирования и подробной информацией о доступности в Алматы
+            Условия и цены на прокат автомобиля Toyota Land Cruiser 200, включая гибкие тарифы на разные сроки аренды, от одного дня до месяца, с возможностью онлайн-бронирования и подробной информацией о доступности в Алматы.
           </p>
           <div className="steps-container">
             <div className="step-island">
               <div className="step-number">01</div>
               <div className="island-header">Преимущества аренды в Алматы</div>
-              <div className="island-body">Почему стоит выбрать 530i 2019 для поездок по Алматы, благодаря его элегантному дизайну, динамичным характеристикам и тёплому коричневому интерьеру</div>
+              <div className="island-body">Почему стоит выбрать Toyota Land Cruiser 200 для поездок по Алматы, благодаря его надежности, внедорожным возможностям и просторному салону с тёплым коричневым интерьером.</div>
             </div>
             <div className="step-island">
               <div className="step-number">02</div>
               <div className="island-header">Особенности автомобиля для аренды</div>
-              <div className="island-body">Узнайте о ключевых характеристиках BMW 530i 2019, таких как мощный двигатель, стильный кузов, высокотехнологичный салон с тёплым коричневым интерьером и адаптация к городским дорогам Алматы</div>
+              <div className="island-body">Узнайте о ключевых характеристиках Toyota Land Cruiser 200 2021, таких как мощный двигатель, прочный кузов, высокотехнологичный салон с тёплым коричневым интерьером и адаптация к дорогам Алматы.</div>
             </div>
           </div>
         </div>
@@ -243,4 +245,4 @@ const BMW530i: React.FC = () => {
   );
 };
 
-export default BMW530i;
+export default LandCruiser200;

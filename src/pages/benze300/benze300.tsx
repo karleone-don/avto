@@ -6,26 +6,29 @@ interface Photo {
   url: string;
 }
 
-const ZeekrX: React.FC = () => {
+const BenzE300: React.FC = () => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(0);
   const [activeTab, setActiveTab] = useState(0);
 
   const photos: Photo[] = [
-    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06681_589e464deb.jpg&w=1024&q=100' },
-    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06685_12eb062afd.jpg&w=1024&q=100' },
-    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06682_21608e9223.jpg&w=1024&q=100' },
-    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06686_ffa5287cf8.jpg&w=1024&q=100' },
-    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06689_f1a0a148cf.jpg&w=1024&q=100' },
-    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06688_deb28516a8.jpg&w=1024&q=100' },
-    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06690_0f12a2b5ed.jpg&w=1024&q=100' },
+    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09504_66bd651bbc.jpg&w=1024&q=100' },
+    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09505_75ef22fdeb.jpg&w=1024&q=100' },
+    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09503_75d6fd667f.jpg&w=1024&q=100' },
+    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09507_5b23b26c1c.jpg&w=1024&q=100' },
+    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09509_7e54aae2fc.jpg&w=1024&q=100' },
+    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09510_f68c45a333.jpg&w=1024&q=100' },
+    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09512_6374522205.jpg&w=1024&q=100' },
+    { id: 8, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09515_3bc8c4735d.jpg&w=1024&q=100' },
+    { id: 9, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09514_99aab4b366.jpg&w=1024&q=100' },
+    { id: 10, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09516_88c05630b5.jpg&w=1024&q=100' },
   ];
 
   const options = [
-    { label: "день", text: "26.000 ₸ / сутки" },
-    { label: "2-4 дня", text: "23.000 ₸ / сутки" },
-    { label: "5-15 дней", text: "21.000 ₸ / сутки" },
-    { label: "16-30 дней", text: "20.000 ₸ / сутки" }
+    { label: "день", text: "120.000 ₸ / сутки" },
+    { label: "2-4 дня", text: "110.000 ₸ / сутки" },
+    { label: "5-15 дней", text: "90.000 ₸ / сутки" },
+    { label: "16-30 дней", text: "60.000 ₸ / сутки" }
   ];
 
   const handlePrevPhoto = () => {
@@ -68,9 +71,9 @@ const ZeekrX: React.FC = () => {
         </div>
 
         <div className="content-section">
-          <h1 className="title">Chery Tiggo 7 Pro 2024</h1>
+          <h1 className="title">Mercedes-Benz E300 2023</h1>
           <p className="description">
-            Аренда Chery Tiggo 7 Pro 2024 по выгодным ценам — современный стиль, комфорт и экономичность
+            Аренда Mercedes-Benz E300 2023 по выгодным ценам с мощным двигателем 3.0, обновленным дизайном и премиальным комфортом
           </p>
 
           <div className="specs-table">
@@ -78,7 +81,7 @@ const ZeekrX: React.FC = () => {
               <div className="spec-value">5 мест</div>
             </div>
             <div className="spec-item">
-              <div className="spec-value">Передний привод</div>
+              <div className="spec-value">Полный привод</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">КПП</div>
@@ -86,15 +89,15 @@ const ZeekrX: React.FC = () => {
             </div>
             <div className="spec-item">
               <div className="spec-label">Расход</div>
-              <div className="spec-value">7.0 л/100 км</div>
+              <div className="spec-value">11.1 л/100 км</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Объем двигателя</div>
-              <div className="spec-value">1.6L</div>
+              <div className="spec-value">3.0L</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Год выпуска</div>
-              <div className="spec-value">2024</div>
+              <div className="spec-value">2023</div>
             </div>
           </div>
 
@@ -145,9 +148,9 @@ const ZeekrX: React.FC = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>5</td><td>147</td><td>1.6L</td><td>Кроссовер</td><td>Передний</td>
-                    <td>9.8 сек</td><td>Синий</td><td>Черный</td><td>185 км/ч</td><td>Автомат</td>
-                    <td>7.0 л/100 км</td><td>2024</td>
+                    <td>5</td><td>285</td><td>3.0L</td><td>Внедорожник</td><td>Полный</td>
+                    <td>6.2 сек</td><td>Серый</td><td>Черный</td><td>250 км/ч</td><td>Автомат</td>
+                    <td>11.1 л/100 км</td><td>2023</td>
                   </tr>
                 </tbody>
               </table>
@@ -221,20 +224,20 @@ const ZeekrX: React.FC = () => {
       {/* БЛОК 3 */}
       <section className="block block-3">
         <div className="block-content">
-          <h2 className="block-title">Аренда ZEEKR X в Алматы</h2>
+          <h2 className="block-title">Аренда Mercedes-Benz E300 2023 в Алматы</h2>
           <p className="description">
-            Условия и цены на прокат автомобиля ZEEKR X, включая гибкие тарифы на разные сроки аренды, от одного дня до месяца, с возможностью онлайн-бронирования и подробной информацией о доступности в Алматы.
+            Условия и цены на прокат обновленного Mercedes-Benz E300 с двигателем 3.0, включая гибкие тарифы на разные сроки аренды, от одного дня до месяца, с возможностью онлайн-бронирования и подробной информацией о доступности в Алматы.
           </p>
           <div className="steps-container">
             <div className="step-island">
               <div className="step-number">01</div>
               <div className="island-header">Преимущества аренды в Алматы</div>
-              <div className="island-body">Почему стоит выбрать ZEEKR X для поездок по Алматы, благодаря его передовому дизайну, мощности, и модному интерьеру.</div>
+              <div className="island-body">Почему стоит выбрать Mercedes-Benz E300 2023 для поездок по Алматы: благодаря его динамичному 3.0-литровому двигателю, интеллектуальному полному приводу, премиальному комфорту и роскошному коричневому интерьеру.</div>
             </div>
             <div className="step-island">
               <div className="step-number">02</div>
               <div className="island-header">Особенности автомобиля для аренды</div>
-              <div className="island-body">Узнайте о ключевых характеристиках ZEEKR X, таких как мощный электрический двигатель, прочный кузов, высокотехнологичный салон и адаптация к сложным дорогам Алматы.</div>
+              <div className="island-body">Узнайте о ключевых характеристиках Mercedes-Benz E300 2023: мощный бензиновый двигатель V6, улучшенная аэродинамика, высокотехнологичный салон с отделкой из натуральной кожи и адаптивная подвеска для идеальных поездок по дорогам Алматы.</div>
             </div>
           </div>
         </div>
@@ -243,4 +246,4 @@ const ZeekrX: React.FC = () => {
   );
 };
 
-export default ZeekrX;
+export default BenzE300;

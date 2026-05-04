@@ -6,26 +6,31 @@ interface Photo {
   url: string;
 }
 
-const ZeekrX: React.FC = () => {
+const LexusLX570: React.FC = () => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(0);
   const [activeTab, setActiveTab] = useState(0);
 
   const photos: Photo[] = [
-    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06681_589e464deb.jpg&w=1024&q=100' },
-    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06685_12eb062afd.jpg&w=1024&q=100' },
-    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06682_21608e9223.jpg&w=1024&q=100' },
-    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06686_ffa5287cf8.jpg&w=1024&q=100' },
-    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06689_f1a0a148cf.jpg&w=1024&q=100' },
-    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06688_deb28516a8.jpg&w=1024&q=100' },
-    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06690_0f12a2b5ed.jpg&w=1024&q=100' },
+    { id: 1, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_IMG_2309_766050f3b2.JPG&w=1024&q=100' },
+    { id: 2, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_IMG_2311_84188fa03a.JPG&w=1024&q=100' },
+    { id: 3, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_IMG_2312_6e53e10cd7.JPG&w=1024&q=100' },
+    { id: 4, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_IMG_2310_35a3847e74.JPG&w=1024&q=100' },
+    { id: 5, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_IMG_2313_f8c89350e3.JPG&w=1024&q=100' },
+    { id: 6, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_IMG_2316_fe2b7e2a3c.JPG&w=1024&q=100' },
+    { id: 7, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_IMG_2314_4881afc77d.JPG&w=1024&q=100' },
+    { id: 8, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_IMG_2315_e2ec162b52.JPG&w=1024&q=100' },
+    { id: 9, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_IMG_2319_e0b187283d.JPG&w=1024&q=100' },
+    { id: 10, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_IMG_2320_72d66be550.JPG&w=1024&q=100' },
+    { id: 11, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_IMG_2318_912437b2c2.JPG&w=1024&q=100' },
+    { id: 12, url: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_IMG_2317_b821c7812f.JPG&w=1024&q=100' },
   ];
 
   const options = [
-    { label: "день", text: "26.000 ₸ / сутки" },
-    { label: "2-4 дня", text: "23.000 ₸ / сутки" },
-    { label: "5-15 дней", text: "21.000 ₸ / сутки" },
-    { label: "16-30 дней", text: "20.000 ₸ / сутки" }
+    { label: "день", text: "190.000 ₸ / сутки" },
+    { label: "2-4 дня", text: "175.000 ₸ / сутки" },
+    { label: "5-15 дней", text: "140.000 ₸ / сутки" },
+    { label: "16-30 дней", text: "110.000 ₸ / сутки" }
   ];
 
   const handlePrevPhoto = () => {
@@ -68,17 +73,17 @@ const ZeekrX: React.FC = () => {
         </div>
 
         <div className="content-section">
-          <h1 className="title">Chery Tiggo 7 Pro 2024</h1>
+          <h1 className="title">Lexus LX 570 2018</h1>
           <p className="description">
-            Аренда Chery Tiggo 7 Pro 2024 по выгодным ценам — современный стиль, комфорт и экономичность
+            Аренда Lexus LX 570 2018 по выгодным ценам с премиальным дизайном и внедорожными возможностями
           </p>
 
           <div className="specs-table">
             <div className="spec-item">
-              <div className="spec-value">5 мест</div>
+              <div className="spec-value">7 мест</div>
             </div>
             <div className="spec-item">
-              <div className="spec-value">Передний привод</div>
+              <div className="spec-value">Полный привод</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">КПП</div>
@@ -86,15 +91,15 @@ const ZeekrX: React.FC = () => {
             </div>
             <div className="spec-item">
               <div className="spec-label">Расход</div>
-              <div className="spec-value">7.0 л/100 км</div>
+              <div className="spec-value">18 л/100 км</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Объем двигателя</div>
-              <div className="spec-value">1.6L</div>
+              <div className="spec-value">5.7L</div>
             </div>
             <div className="spec-item">
               <div className="spec-label">Год выпуска</div>
-              <div className="spec-value">2024</div>
+              <div className="spec-value">2018</div>
             </div>
           </div>
 
@@ -145,9 +150,9 @@ const ZeekrX: React.FC = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>5</td><td>147</td><td>1.6L</td><td>Кроссовер</td><td>Передний</td>
-                    <td>9.8 сек</td><td>Синий</td><td>Черный</td><td>185 км/ч</td><td>Автомат</td>
-                    <td>7.0 л/100 км</td><td>2024</td>
+                    <td>7</td><td>383</td><td>5.7L</td><td>Внедорожник</td><td>Полный</td>
+                    <td>7.7 сек</td><td>Черный</td><td>Бордовый</td><td>220 км/ч</td><td>Автомат</td>
+                    <td>18 л/100 км</td><td>2018</td>
                   </tr>
                 </tbody>
               </table>
@@ -221,20 +226,20 @@ const ZeekrX: React.FC = () => {
       {/* БЛОК 3 */}
       <section className="block block-3">
         <div className="block-content">
-          <h2 className="block-title">Аренда ZEEKR X в Алматы</h2>
+          <h2 className="block-title">Аренда Lexus LX 570 2018 в Алматы</h2>
           <p className="description">
-            Условия и цены на прокат автомобиля ZEEKR X, включая гибкие тарифы на разные сроки аренды, от одного дня до месяца, с возможностью онлайн-бронирования и подробной информацией о доступности в Алматы.
+            Условия и цены на прокат автомобиля Lexus LX 570, включая гибкие тарифы на разные сроки аренды, от одного дня до месяца, с возможностью онлайн-бронирования и подробной информацией о доступности в Алматы.
           </p>
           <div className="steps-container">
             <div className="step-island">
               <div className="step-number">01</div>
               <div className="island-header">Преимущества аренды в Алматы</div>
-              <div className="island-body">Почему стоит выбрать ZEEKR X для поездок по Алматы, благодаря его передовому дизайну, мощности, и модному интерьеру.</div>
+              <div className="island-body">Почему стоит выбрать Lexus LX 570 для поездок по Алматы, благодаря его премиальному дизайну, мощности, внедорожным возможностям и просторному салону с тёплым коричневым интерьером.</div>
             </div>
             <div className="step-island">
               <div className="step-number">02</div>
               <div className="island-header">Особенности автомобиля для аренды</div>
-              <div className="island-body">Узнайте о ключевых характеристиках ZEEKR X, таких как мощный электрический двигатель, прочный кузов, высокотехнологичный салон и адаптация к сложным дорогам Алматы.</div>
+              <div className="island-body">Узнайте о ключевых характеристиках Lexus LX 570 2018, таких как мощный двигатель, прочный кузов, высокотехнологичный салон с тёплым коричневым интерьером и адаптация к дорогам Алматы.</div>
             </div>
           </div>
         </div>
@@ -243,4 +248,4 @@ const ZeekrX: React.FC = () => {
   );
 };
 
-export default ZeekrX;
+export default LexusLX570;

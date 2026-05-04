@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import MainPage from './pages/MainPage.tsx';
 import ZeekrX from './pages/zeekrx/zeekrx.tsx';
 import CheryTiggo7 from './pages/cherytiggo7/cherytiggo7.tsx';
 import Elantra24 from './pages/elantra24/elantra24.tsx';
@@ -20,6 +21,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<MainPage />} />
         {/*эконом*/}
         <Route path="/zeekr-x" element={<ZeekrX />} />
         <Route path="/chery-tiggo-7-pro" element={<CheryTiggo7 />} />

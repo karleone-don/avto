@@ -1,5 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
+import Header from './pages/Header.tsx';
 import MainPage from './pages/MainPage.tsx';
 import ZeekrX from './pages/zeekrx/zeekrx.tsx';
 import CheryTiggo7 from './pages/cherytiggo7/cherytiggo7.tsx';
@@ -16,33 +18,94 @@ import BenzE300 from './pages/benze300/benze300.tsx';
 import BMW530i2023 from './pages/bmw530i2023/bmw530i2023.tsx';
 import BenzV220 from './pages/benzv220/benzv220.tsx';
 import LexusLX570 from './pages/lexuslx570/lexuslx570.tsx';
+import BookingModal from './components/BookingModal.tsx';
+import { carsData } from './pages/carsData.ts';
 
-function App() {
+type BookingState = {
+  carId?: string;
+  carName?: string;
+  showCarSelect?: boolean;
+};
+
+function AppContent() {
+  const location = useLocation();
+  const [booking, setBooking] = useState<BookingState | null>(null);
+
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const handleOpenBooking = (event: Event) => {
+      const detail = (event as CustomEvent<BookingState>).detail || {};
+      setBooking(detail);
+    };
+
+    window.addEventListener('openBookingModal', handleOpenBooking);
+    return () => window.removeEventListener('openBookingModal', handleOpenBooking);
+  }, []);
+
+  useEffect(() => {
+    const handleDetailBookingClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      const button = target?.closest('.action-button');
+
+      if (!button) return;
+
+      const car = carsData.find(item => item.path === location.pathname);
+
+      if (car) {
+        setBooking({ carId: car.id, carName: car.name });
+      }
+    };
+
+    document.addEventListener('click', handleDetailBookingClick);
+    return () => document.removeEventListener('click', handleDetailBookingClick);
+  }, [location.pathname]);
+
+  const carOptions = carsData.map(car => ({ id: car.id, name: car.name }));
+
   return (
-    <Router>
+    <>
+      <Header />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        {/*эконом*/}
         <Route path="/zeekr-x" element={<ZeekrX />} />
         <Route path="/chery-tiggo-7-pro" element={<CheryTiggo7 />} />
         <Route path="/elantra-2024" element={<Elantra24 />} />
         <Route path="/benz-c180" element={<BenzC180 />} />
         <Route path="/kia-cerato-2024" element={<KiaCerato2024 />} />
-        {/*комфорт*/}
         <Route path="/lexus-gx460" element={<LexusGX460 />} />
         <Route path="/bmw-530i-2019" element={<BMW530i2019 />} />
         <Route path="/hyundai-staria-2025" element={<HyundaiStaria2025 />} />
         <Route path="/lixiang-li6" element={<LixiangLi6 />} />
         <Route path="/kia-carnival-2024" element={<KiaCarnival2024 />} />
-        {/*комфорт+*/}
         <Route path="/land-cruiser-200" element={<LandCruiser200 />} />
         <Route path="/benz-e300" element={<BenzE300 />} />
         <Route path="/bmw-530i-2023" element={<BMW530i2023 />} />
         <Route path="/benz-v220" element={<BenzV220 />} />
         <Route path="/lexus-lx570" element={<LexusLX570 />} />
       </Routes>
-    </Router>
-  )
+      <BookingModal
+        isOpen={booking !== null}
+        carId={booking?.carId}
+        carName={booking?.carName}
+        carOptions={carOptions}
+        showCarSelect={booking?.showCarSelect}
+        onClose={() => setBooking(null)}
+      />
+    </>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+}
+
+export default App;

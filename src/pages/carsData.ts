@@ -1,9 +1,18 @@
+export interface Specs {
+  seats: string;
+  transmission: string;
+  consumption: string;
+  engine: string;
+}
+
 export interface CarData {
   id: string;
   name: string;
   path: string;
-  category: 'econom' | 'comfort' | 'comfort+' | 'popular';
+  category: 'econom' | 'premium' | 'luxury';
   image: string;
+  price: number;
+  specs: Specs;
   options: Array<{ label: string; text: string }>;
 }
 
@@ -14,7 +23,14 @@ export const carsData: CarData[] = [
     name: 'ZEEKR X',
     path: '/zeekr-x',
     category: 'econom',
+    price: 40000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_05767_7adbaf38b6.jpg&w=1024&q=100',
+    specs: {
+      seats: '5 мест',
+      transmission: 'Автомат',
+      consumption: '16,4 кВт·ч/100км',
+      engine: 'Электрика'
+    },
     options: [
       { label: 'день', text: '40.000 ₸ / сутки' },
       { label: '2-4 дня', text: '36.000 ₸ / сутки' },
@@ -27,7 +43,14 @@ export const carsData: CarData[] = [
     name: 'Chery Tiggo 7 Pro',
     path: '/chery-tiggo-7-pro',
     category: 'econom',
+    price: 26000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06681_589e464deb.jpg&w=1024&q=100',
+    specs: {
+      seats: '5 мест',
+      transmission: 'Автомат',
+      consumption: '8,2 л/100км',
+      engine: '1.5L'
+    },
     options: [
       { label: 'день', text: '26.000 ₸ / сутки' },
       { label: '2-4 дня', text: '23.000 ₸ / сутки' },
@@ -40,7 +63,14 @@ export const carsData: CarData[] = [
     name: 'Elantra 2024',
     path: '/elantra-2024',
     category: 'econom',
+    price: 25000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_7_M307404_b9490dc51e.jpg&w=1024&q=100',
+    specs: {
+      seats: '5 мест',
+      transmission: 'Автомат',
+      consumption: '7,5 л/100км',
+      engine: '2.0L'
+    },
     options: [
       { label: 'день', text: '25.000 ₸ / сутки' },
       { label: '2-4 дня', text: '23.000 ₸ / сутки' },
@@ -53,7 +83,14 @@ export const carsData: CarData[] = [
     name: 'Mercedes-Benz C180 2018',
     path: '/benz-c180',
     category: 'econom',
+    price: 40000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_7_M301776_7b081a3e8f.jpg&w=1024&q=100',
+    specs: {
+      seats: '5 мест',
+      transmission: 'Автомат',
+      consumption: '6,8 л/100км',
+      engine: '1.6L'
+    },
     options: [
       { label: 'день', text: '40.000 ₸ / сутки' },
       { label: '2-4 дня', text: '36.000 ₸ / сутки' },
@@ -66,7 +103,14 @@ export const carsData: CarData[] = [
     name: 'Kia Cerato 2024',
     path: '/kia-cerato-2024',
     category: 'econom',
+    price: 25000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_03178_3187693a77.jpg&w=1024&q=100',
+    specs: {
+      seats: '5 мест',
+      transmission: 'Автомат',
+      consumption: '7,2 л/100км',
+      engine: '1.8L'
+    },
     options: [
       { label: 'день', text: '25.000 ₸ / сутки' },
       { label: '2-4 дня', text: '23.000 ₸ / сутки' },
@@ -74,13 +118,20 @@ export const carsData: CarData[] = [
       { label: '16-30 дней', text: '20.000 ₸ / сутки' }
     ]
   },
-  // Комфорт
+  // Премиум
   {
     id: '6',
     name: 'Lexus GX460 2021',
     path: '/lexus-gx460',
-    category: 'comfort',
+    category: 'premium',
+    price: 60000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_08020_dd4b6e4336.jpg&w=1024&q=100',
+    specs: {
+      seats: '7 мест',
+      transmission: 'Автомат',
+      consumption: '13,5 л/100км',
+      engine: '4.6L'
+    },
     options: [
       { label: 'день', text: '60.000 ₸ / сутки' },
       { label: '2-4 дня', text: '55.000 ₸ / сутки' },
@@ -92,8 +143,15 @@ export const carsData: CarData[] = [
     id: '7',
     name: 'BMW 530i 2019',
     path: '/bmw-530i-2019',
-    category: 'comfort',
+    category: 'premium',
+    price: 75000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_Syndicate2_c208fdb4c8.jpg&w=1024&q=100',
+    specs: {
+      seats: '5 мест',
+      transmission: 'Автомат',
+      consumption: '10,2 л/100км',
+      engine: '3.0L'
+    },
     options: [
       { label: 'день', text: '75.000 ₸ / сутки' },
       { label: '2-4 дня', text: '70.000 ₸ / сутки' },
@@ -105,8 +163,15 @@ export const carsData: CarData[] = [
     id: '8',
     name: 'Hyundai Staria 2025',
     path: '/hyundai-staria-2025',
-    category: 'comfort',
+    category: 'premium',
+    price: 75000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Fmedium_5321553970142583244_1a42486bf6.jpg&w=1024&q=100',
+    specs: {
+      seats: '9 мест',
+      transmission: 'Автомат',
+      consumption: '12,4 л/100км',
+      engine: '3.5L'
+    },
     options: [
       { label: 'день', text: '75.000 ₸ / сутки' },
       { label: '2-4 дня', text: '70.000 ₸ / сутки' },
@@ -118,8 +183,15 @@ export const carsData: CarData[] = [
     id: '9',
     name: 'Lixiang Li6',
     path: '/lixiang-li6',
-    category: 'comfort',
+    category: 'premium',
+    price: 65000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01915_469749894a.jpg&w=1024&q=100',
+    specs: {
+      seats: '6 мест',
+      transmission: 'Автомат',
+      consumption: '11,8 л/100км',
+      engine: '3.0L'
+    },
     options: [
       { label: 'день', text: '65.000 ₸ / сутки' },
       { label: '2-4 дня', text: '60.000 ₸ / сутки' },
@@ -131,8 +203,15 @@ export const carsData: CarData[] = [
     id: '10',
     name: 'Kia Carnival 2024',
     path: '/kia-carnival-2024',
-    category: 'comfort',
+    category: 'premium',
+    price: 60000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_01639_e98c6ee100.jpg&w=1024&q=100',
+    specs: {
+      seats: '7 мест',
+      transmission: 'Автомат',
+      consumption: '11,5 л/100км',
+      engine: '3.5L'
+    },
     options: [
       { label: 'день', text: '60.000 ₸ / сутки' },
       { label: '2-4 дня', text: '55.000 ₸ / сутки' },
@@ -140,13 +219,20 @@ export const carsData: CarData[] = [
       { label: '16-30 дней', text: '40.000 ₸ / сутки' }
     ]
   },
-  // Комфорт+
+  // Люкс
   {
     id: '11',
     name: 'Toyota Land Cruiser 200',
     path: '/land-cruiser-200',
-    category: 'comfort+',
+    category: 'luxury',
+    price: 90000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09492_be48aaac74.jpg&w=1024&q=100',
+    specs: {
+      seats: '7 мест',
+      transmission: 'Автомат',
+      consumption: '14,8 л/100км',
+      engine: '4.7L'
+    },
     options: [
       { label: 'день', text: '90.000 ₸ / сутки' },
       { label: '2-4 дня', text: '85.000 ₸ / сутки' },
@@ -158,8 +244,15 @@ export const carsData: CarData[] = [
     id: '12',
     name: 'Mercedes-Benz E300 2021',
     path: '/benz-e300',
-    category: 'comfort+',
+    category: 'luxury',
+    price: 120000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_09504_66bd651bbc.jpg&w=1024&q=100',
+    specs: {
+      seats: '5 мест',
+      transmission: 'Автомат',
+      consumption: '9,8 л/100км',
+      engine: '2.0L Turbo'
+    },
     options: [
       { label: 'день', text: '120.000 ₸ / сутки' },
       { label: '2-4 дня', text: '110.000 ₸ / сутки' },
@@ -171,8 +264,15 @@ export const carsData: CarData[] = [
     id: '13',
     name: 'BMW 530i 2023',
     path: '/bmw-530i-2023',
-    category: 'comfort+',
+    category: 'luxury',
+    price: 120000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_5422801712403570884_898fe35537.jpg&w=1024&q=100',
+    specs: {
+      seats: '5 мест',
+      transmission: 'Автомат',
+      consumption: '10,5 л/100км',
+      engine: '3.0L Turbo'
+    },
     options: [
       { label: 'день', text: '120.000 ₸ / сутки' },
       { label: '2-4 дня', text: '110.000 ₸ / сутки' },
@@ -184,8 +284,15 @@ export const carsData: CarData[] = [
     id: '14',
     name: 'Mercedes-Benz V220 2020',
     path: '/benz-v220',
-    category: 'comfort+',
+    category: 'luxury',
+    price: 150000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_DSC_06693_6558c3461e.jpg&w=1024&q=100',
+    specs: {
+      seats: '7 мест',
+      transmission: 'Автомат',
+      consumption: '13,2 л/100км',
+      engine: '3.0L'
+    },
     options: [
       { label: 'день', text: '150.000 ₸ / сутки' },
       { label: '2-4 дня', text: '140.000 ₸ / сутки' },
@@ -197,8 +304,15 @@ export const carsData: CarData[] = [
     id: '15',
     name: 'Lexus LX570 2022',
     path: '/lexus-lx570',
-    category: 'comfort+',
+    category: 'luxury',
+    price: 100000,
     image: 'https://syndicateauto.kz/_next/image?url=https%3A%2F%2Fsyndicateauto.kz%2Fstrapi%2Fuploads%2Flarge_IMG_2309_766050f3b2.JPG&w=1024&q=100',
+    specs: {
+      seats: '7 мест',
+      transmission: 'Автомат',
+      consumption: '15,2 л/100км',
+      engine: '5.7L'
+    },
     options: [
       { label: 'день', text: '100.000 ₸ / сутки' },
       { label: '2-4 дня', text: '95.000 ₸ / сутки' },
